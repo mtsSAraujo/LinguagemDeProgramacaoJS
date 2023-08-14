@@ -10,6 +10,7 @@ function calcular(){
         alert("Peso e altura devem ser maiores que 0!")
     }
     else{
-        alert(`O seu IMC é de ${imc.toFixed(2)}`)
+        document.getElementById("imc").innerHTML = imc.toFixed(2)
+        //alert(`O seu IMC é de ${imc.toFixed(2)}`)
     }
 }
