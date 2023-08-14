@@ -11,6 +11,6 @@
 }
 
 #areaPeso, #areaAltura, #areaBotao {
-    border: 1px solid #000; /* red green blue - RGB */
+    /*border: 1px solid #000; /* red green blue - RGB */
     margin-bottom: 40px;
 }
