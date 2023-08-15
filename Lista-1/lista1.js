@@ -18,6 +18,11 @@ function ex2(){
 
 function ex3(){
 
+    let n1 = document.getElementById("ex3N1").value;
+    let n2 = document.getElementById("ex3N2").value;
+    let div = n1/n2;
+    document.getElementById("resposta").innerHTML = `O resultado é: ${div.toFixed(2)}`
+
 }
 
 function ex4(){
