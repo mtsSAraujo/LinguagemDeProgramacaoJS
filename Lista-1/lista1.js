@@ -26,6 +26,10 @@ function ex3(){
 }
 
 function ex4(){
+    let n1 = document.getElementById("ex4N1").value;
+    let n2 = document.getElementById("ex4N2").value;
+    let media = ((n1*2) + (n2*3))/5
+    document.getElementById("resposta").innerHTML = `O resultado é: ${media.toFixed(2)}`
 
 }
 
