@@ -46,7 +46,7 @@ function ex6(){
     let vendas = parseFloat(document.getElementById("ex6N2").value);
     let comissao = vendas * 0.04;
     let sal_final = parseFloat(sal+comissao);
-    document.getElementById("resposta").innerHTML = `O salário final é: ${sal_final.toFixed(2)} \n
+    document.getElementById("resposta").innerHTML = `O salário final é: ${sal_final.toFixed(2)} <br>
     e o valor da comissão é: ${comissao.toFixed(2)}`;
 
 }
@@ -55,7 +55,7 @@ function ex7(){
     let peso = parseFloat(document.getElementById("ex7N1").value);
     let pesoMais = parseFloat(peso + 0.15*peso);
     let pesoMenos = parseFloat(peso - 0.2*peso);
-    document.getElementById("resposta").innerHTML = `O novo peso ao engordar é de: ${pesoMais.toFixed(2)}
+    document.getElementById("resposta").innerHTML = `O novo peso ao engordar é de: ${pesoMais.toFixed(2)} <br>
     O novo peso ao emagrecer é de: ${pesoMenos.toFixed(2)}`
 
 }
@@ -90,3 +90,29 @@ function ex11(){
 
 }
 
+function ex12(){
+    let salMin = parseFloat(document.getElementById("ex12N1").value);
+    let sal = parseFloat(document.getElementById("ex12N2").value);
+    let qntSal = sal/salMin
+    document.getElementById("resposta").innerHTML = `A quantidade de salarios minimos recebida é de:
+     ${qntSal.toFixed(2)}`
+
+}
+
+function ex13(){
+    let number = parseFloat(document.getElementById("ex13N1").value);
+    let resultado = 0;
+    let resultadoString = null;
+    let concatena = null;
+    for(i=0; i<11; i++){
+        resultado = number * i
+        resultadoString = `${number} x ${i} = ${resultado} <br>`
+        if(concatena == null){
+            concatena = resultadoString
+        }
+        else{
+            concatena += resultadoString
+        }
+    }
+    document.getElementById("resposta").innerHTML = concatena
+}
