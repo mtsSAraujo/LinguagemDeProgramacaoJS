@@ -116,3 +116,11 @@ function ex13(){
     }
     document.getElementById("resposta").innerHTML = concatena
 }
+
+function ex20(){
+    let angulo = Number(document.getElementById("ex20N1").value);
+    let catAdjacente = Number(document.getElementById("ex20N2").value);
+    angulo = (angulo * Math.PI)/180;
+    let hipotenusa = catAdjacente/Math.cos(angulo);
+    document.getElementById("resposta").innerHTML = `O valor da medida da escada é de: ${hipotenusa.toFixed(2)}`;
+}
