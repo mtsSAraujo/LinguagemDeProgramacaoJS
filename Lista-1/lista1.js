@@ -116,6 +116,26 @@ function ex13(){
     }
     document.getElementById("resposta").innerHTML = concatena
 }
+function ex14(){
+    let anoNascimento = Number(document.getElementById("ex14N1").value);
+    let anoAtual = Number(document.getElementById("ex14N2").value);
+    let idadeAnos = anoAtual - anoNascimento;
+    let idadeMeses = idadeAnos * 12;
+    let idadeSemanas = idadeMeses * 4;
+    let idadeDias = idadeAnos * 365;
+
+    for(i=idadeAnos; i >= 4; i -=4){
+        idadeDias = idadeDias + 1;
+    }
+
+    let respostaString = `a idade em anos é: ${idadeAnos}; <br>
+    a idade em meses é: ${idadeMeses}; <br>
+    a idade em semanas é: ${idadeSemanas}; <br>
+    a idade em dias é: ${idadeDias}; `;
+    
+    document.getElementById("resposta").innerHTML = respostaString;
+
+}
 
 function ex20(){
     let angulo = Number(document.getElementById("ex20N1").value);
