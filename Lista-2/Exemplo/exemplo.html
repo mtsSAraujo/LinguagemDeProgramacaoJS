@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo - Lista 2</title>
+        <link rel="stylesheet" href="exemplo.css"/>
+        <script src="exemplo.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1> Exemplo </h1>
+            <div id="form">
+                <div>
+                    <label> Informe o primeiro número (N1) </label>
+                    <input type="number" id="exemploN1" placeholder="Ex: 12" required/>
+                </div>
+                <div>
+                    <label> Informe o segundo número (N2) </label>
+                    <input type="number" id="exemploN2" placeholder="Ex: 25" required/>
+                </div>
+                <div>
+                    <label> Escolha um número entre as opções: </label>
+                        <select name = "escolha" id = "escolha" required>
+                            <option value="1"> 1 - Média entre os números digitados;</option>
+                            <option value="2"> 2 - Diferença do maior pelo menor;</option>
+                            <option value="3"> 3 - Produto entre os números informados;</option>
+                            <option value="4"> 4 - Divisão do primeiro pelo segundo;</option>
+                        </select>
+
+                </div>
+                <div>
+                    <button onclick="exemplo()"> Calcular </button>
+                </div>
+                <div id="areaResposta">
+                    <p id="resposta"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
