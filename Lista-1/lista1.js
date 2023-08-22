@@ -147,7 +147,7 @@ function ex15(){
 
     let salFinal = salario -conta1 - conta2;
 
-    let respostaString = `O salário final esperado é de: ${salFinal}`;
+    let respostaString = `O salário final esperado é de: ${salFinal.toFixed(2)}`;
 
     document.getElementById("resposta").innerHTML = respostaString;
 
