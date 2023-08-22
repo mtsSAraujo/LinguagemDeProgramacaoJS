@@ -132,7 +132,23 @@ function ex14(){
     a idade em meses é: ${idadeMeses}; <br>
     a idade em semanas é: ${idadeSemanas}; <br>
     a idade em dias é: ${idadeDias}; `;
-    
+
+    document.getElementById("resposta").innerHTML = respostaString;
+
+}
+
+function ex15(){
+    let salario = Number(document.getElementById("ex15N1").value);
+    let conta1 = Number(document.getElementById("ex15N2").value);
+    let conta2 = Number(document.getElementById("ex15N3").value);
+
+    conta1 = conta1 + conta1 * 0.02;
+    conta2 = conta2 + conta2 * 0.02;
+
+    let salFinal = salario -conta1 - conta2;
+
+    let respostaString = `O salário final esperado é de: ${salFinal}`;
+
     document.getElementById("resposta").innerHTML = respostaString;
 
 }
