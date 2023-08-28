@@ -153,6 +153,15 @@ function ex15(){
 
 }
 
+function ex16(){
+
+    let catetoOposto = Number(document.getElementById("ex16N1").value);
+    let catetoAdjacente = Number(document.getElementById("ex16N2").value);
+    let hipotenusa = Math.SQRT2(catetoAdjacente**2 + catetoOposto**2);
+
+    document.getElementById("resposta").innerHTML = `o valor da hipotenusa é: ${hipotenusa.toFixed(2)}`;
+}
+
 function ex20(){
     let angulo = Number(document.getElementById("ex20N1").value);
     let catAdjacente = Number(document.getElementById("ex20N2").value);
