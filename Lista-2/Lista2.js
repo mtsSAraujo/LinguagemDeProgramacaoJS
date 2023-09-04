@@ -24,6 +24,124 @@ function ex15(){
         `Escolha uma opção para continuar`
     }
 }
+function ex16(){
+    let precoAtual = Number(document.getElementById("ex16n1").value);
+    let descP = 0;
+    let novoPreco = 0;
+
+    if (precoAtual <= 30 && precoAtual >= 0){
+        descP = 0;
+    } else if (precoAtual > 30 && precoAtual < 100){
+        descP = precoAtual * 0.10;
+    } else if (precoAtual >= 100){
+        descP = precoAtual * 0.15;
+    } else {
+        alert(`Preço invalido`)
+        return
+    }
+    novoPreco = precoAtual - descP;
+    document.getElementById("desconto").innerHTML = `Valor do desconto: ${descP}`;
+    document.getElementById("novoPreco").innerHTML = `Novo preço: ${novoPreco}`;
+}
+function ex17(){
+    let respSenha = document.getElementById("senha").value;
+    let senha = "4531";
+    if (respSenha == senha){
+        alert(`Acesso concedido`);
+    } else {
+        alert(`Acesso negado`);
+    }
+}
+
+function ex18(){
+    let idade = Number(document.getElementById("ex18n1").value);
+    let resposta;
+    if (idade >= 18){
+        resposta = "Voce é maior de idade";
+    } else if (idade >= 0 && idade < 18 ){
+        resposta = "Voce é menor de idade";
+    } else {
+        alert(`Idade invalida`);
+        resposta = "";
+    }
+    document.getElementById("verificar").innerHTML = `${resposta}`;
+}
+function ex19(){
+    let altura = Number(document.getElementById("ex19n1").value);
+    let sexo = document.getElementById("ex19n2").value;
+    let ideal = 0;
+    
+    if(altura >= 0){
+        switch (sexo){
+            case "F":
+                ideal = (62.1 * altura) - 44.7;
+                break
+            case "M":
+                ideal = (72.7 * altura) - 58;
+                break
+            default:
+                alert(`Opção invalida`);
+        }
+        document.getElementById("pesoIdeal").innerHTML = `O peso ideal: ${ideal.toFixed(2)}`;
+    } else {
+        alert(`Altura invalida`);
+        document.getElementById("pesoIdeal").innerHTML = `Altura invalida`;
+    }
+}
+
+function ex20(){
+    let idade = Number(document.getElementById("ex20n1").value);
+    let categoria;
+    if(idade > 4){
+        if (idade >= 5 && idade <= 7){
+            categoria = "Infantil";
+        }else if (idade >= 8 && idade <= 10){
+            categoria = "Juvenil";
+        }else if (idade >= 11 && idade <= 15){
+            categoria = "Adolescente";
+        }else if (idade >= 16 && idade <= 30){
+            categoria = "Adulto";
+        }else if (idade > 30){
+            categoria = "Senior";
+        }
+    } else {
+        alert(`Idade invalida`);
+        document.getElementById("categoria").innerHTML = `Idade invalida`;
+        return
+    }
+    document.getElementById("categoria").innerHTML = `Categoria: ${categoria}`;
+}
+
+function ex21(){
+    let preco = Number(document.getElementById("ex21n1").value);
+    let codigo = Number(document.getElementById("ex21n2").value);
+    let procedencia;
+
+    if(codigo > 0 && codigo <= 30){
+        if(codigo == 1){
+            procedencia = "Sul";
+        } else if(codigo == 2){
+            procedencia = "Norte";
+        } else if(codigo == 3){
+            procedencia = "Leste";
+        } else if(codigo == 4){
+            procedencia = "Oeste";
+        } else if(codigo == 5 || codigo == 6){
+            procedencia = "Nordeste";
+        } else if(codigo >= 7 && codigo <= 9){
+            procedencia = "Sudeste";
+        } else if(codigo >= 10 && codigo <= 20){
+            procedencia = "Centro-Oeste";
+        } else if(codigo >= 21 && codigo <= 30){
+            procedencia = "Nordeste";
+        }
+    } else {
+        alert(`Código invalido`)
+        document.getElementById("procedencia").innerHTML = `Codigo invalida`;
+        return
+    }
+    document.getElementById("procedencia").innerHTML = `Procedencia: ${procedencia}`;
+}
 
 function ex22(){
     let anos = Number(document.getElementById("ex22n1").value);
