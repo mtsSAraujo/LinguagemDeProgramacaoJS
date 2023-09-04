@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 19 - lista 2</title>
+        <script src="lista2.js"></script>
+        <link rel="stylesheet" href="lista2.css">
+    </head>
+    <body>
+       <div id="container">
+            <h1>Exercicio 19</h1>
+            <div id="form">
+                <div id="areaSexo">
+                    <label for="sexo">Seu sexo</label>
+                    <select id="sexo">
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+                <div id="areaAltura">
+                    <label for="altura">Sua altura</label>
+                    <input type="number" id="altura" required min="0" placeholder="Ex: 1.75">
+                </div>
+                <div id="areaBotao">
+                    <button onclick="exe19()">Calcular</button>
+                </div>
+                <div id="areaResposta">
+                    <p id="pesoIdeal"></p>
+                </div>
+            </div>
+       </div> 
+    </body>
+</html>
