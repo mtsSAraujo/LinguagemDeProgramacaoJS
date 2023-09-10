@@ -212,12 +212,114 @@ function ex7(){
 }
 
 function ex8(){
+    let idadeMaior50 = 0;
+    let idadeSoma = 0;
+    let idadeMedia = 0;
+    let idadeQuantidade = 0;
+    let olhoAzul = 0;
+    let porcentagemOlhoAzul = 0;
+    let ruivo = 0;
 
+
+    for(let i = 1; i<=6; i++){
+        const idade = prompt(`Insira a idade da ${i}º pessoa: `);
+        const peso = prompt(`Insira o peso da ${i}º pessoa: `);
+        const altura = prompt(`Insira a altura da ${i}º pessoa (Use . como separador decimal): `);
+        const corDosOlhos = prompt(`Insira uma opção para cor dos olhos(A - azul; P - preto; V - verde; C - castanho.): `);
+        const corDoCabelo = prompt(`Insira uma opção para cor do cabelo(P - preto; C - castanho; L - louro; R - ruivo.):`);
+
+        if(idade > 50 && peso <60){
+            idadeMaior50 ++;
+        }
+        if(altura < 1.50){
+            idadeSoma += altura;
+            idadeQuantidade ++;
+        }
+        if(corDosOlhos === "A" || corDosOlhos === "a"){
+            olhoAzul ++;
+        }
+
+        if(corDosOlhos != "A" && corDoCabelo === "R" || corDoCabelo === "r"){
+            ruivo ++;
+        }
+    }
+    if(idadeQuantidade != 0){
+        idadeMedia = idadeSoma/idadeQuantidade;
+    }
+
+    porcentagemOlhoAzul = olhoAzul/6 *100;
+
+    resposta = `Pessoas com idade superior a 50 anos e peso inferior a 60Kg: ${idadeMaior50} <br>
+    Média da idade das pessoas com altura inferior a 1.5 metros: ${idadeMedia} <br>
+    Porcentagem de pessoas com olhos azuis: ${porcentagemOlhoAzul}% <br>
+    Quantidade de pessoas ruivas que não possuem olhos azuis: ${ruivo}`
+    
+    document.getElementById("resposta").innerHTML = resposta;
 }
+
 
 function ex9(){
 
-}
-function ex10(){
+    let mediaIdade = 0;
+    let somaIdade = 0;
+    let pesoMaior90 = 0;
+    let idade10 = 0;
+    let porcentagemIdade10 = 0;
 
+    for(let i = 1; i<=10; i++){
+        const idade = prompt(`Insira a idade da ${i}º pessoa: `);
+        const peso = prompt(`Insira o peso da ${i}º pessoa: `);
+        const altura = prompt(`Insira a altura da ${i}º pessoa (Use . como separador decimal): `);
+
+        somaIdade += idade;
+        if(peso> 90 && altura < 1.5){
+            pesoMaior90 ++;
+        }
+
+        if(idade>= 10 && idade <= 30 && altura > 1.9){
+            idade10 ++;
+        }
+    }
+    
+    mediaIdade = somaIdade/10;
+    
+    porcentagemIdade10 = idade10/10 * 100;
+
+    resposta = `Média das idades: ${mediaIdade} <br>
+    Quantidade de pessoas com peso superior a 90Kg e altura inferior a 1.5 metros: ${pesoMaior90} <br>
+    Porcentagem de pessoas com idade entre 10 e 30 anos e altura superior a 1.9 metros: ${porcentagemIdade10}%`
+    
+    document.getElementById("resposta").innerHTML = resposta;
+
+}
+
+function ex10(){
+    let somaPar = 0;
+    let somaPrimo = 0;
+    let resposta = "";
+    let flag = 0;
+
+    for(let i = 1; i<=10; i++){
+        const num = Number(prompt(`Digite um número qualquer: `));
+
+        if(num % 2 === 0){
+            somaPar += num;
+        }
+
+        for(let i = 2; i < num; i ++){
+            if(num % i === 0){
+                flag = 1;
+                break;
+            }
+        }
+        if(flag === 0){
+            somaPrimo += num;
+        }
+        flag = 0;
+    }
+
+    resposta = `Soma dos números pares: ${somaPar} <br>
+    Soma dos números primos: ${somaPrimo}`
+
+    document.getElementById("resposta").innerHTML = resposta;
 }
