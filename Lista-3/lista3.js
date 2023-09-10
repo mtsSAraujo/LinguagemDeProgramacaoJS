@@ -142,3 +142,82 @@ function ex5(){
     }
     document.getElementById("corpo").innerHTML = corpo;
 }
+
+function ex6(){
+
+    let totalAVista = 0;
+    let totalAPrazo = 0;
+    let totalCompras = 0;
+    let primeiraPrestacao = 0;
+    let resposta = "";
+
+    for (let i = 1; i <= 15; i++) {
+        const codigo = prompt(`Transação ${i}: Código (V para à vista, P para a prazo):`);
+        const valor = parseFloat(prompt(`Transação ${i}: Valor:`));
+
+        if (codigo === "V" || codigo === "v") {
+            totalAVista += valor;
+        } 
+        else if (codigo === "P" || codigo === "p") {
+            totalAPrazo += valor;
+        }
+        totalCompras += valor;
+    }
+    primeiraPrestacao = totalAPrazo/3;
+    primeiraPrestacao = primeiraPrestacao.toFixed(2);
+    resposta = `Compras à vista: ${totalAVista} <br>
+    Compras a prazo: ${totalAPrazo} <br>
+    Total das compras: ${totalCompras} <br>
+    Primeira prestação das compras a prazo: ${primeiraPrestacao}`
+    document.getElementById("resposta").innerHTML = resposta;
+}
+
+function ex7(){
+
+    let maior50 = 0;
+    let alturaSoma = 0;
+    let alturaMedia = 0;
+    let alturaQuantidade = 0;
+    let pesoMenor40 = 0;
+    let porcentagemPeso = 0;
+    let resposta = "";
+
+    for(let i = 1; i<=5; i++){
+        const idade = prompt(`Insira a idade da ${i}º pessoa: `);
+        const peso = prompt(`Insira o peso da ${i}º pessoa: `);
+        const altura = prompt(`Insira a altura da ${i}º pessoa (Use . como separador decimal): `);
+
+        if(idade > 50){
+            maior50 ++;
+        }
+        if(idade>=10 && idade<=20){
+            alturaSoma += altura;
+            alturaQuantidade ++;
+        }
+        if(peso < 40){
+            pesoMenor40 ++
+        }
+    }
+    if(alturaQuantidade != 0){
+        alturaMedia = alturaSoma/alturaQuantidade;
+    }
+
+    porcentagemPeso = pesoMenor40/5 *100;
+
+    resposta = `Pessoas com idade superior a 50 anos: ${maior50} <br>
+    Média das alturas das pessoas entre 10 e 20 anos: ${alturaMedia} <br>
+    Porcentagem de pessoas com peso inferior a 40Kg: ${porcentagemPeso}%`
+    
+    document.getElementById("resposta").innerHTML = resposta;
+}
+
+function ex8(){
+
+}
+
+function ex9(){
+
+}
+function ex10(){
+
+}
