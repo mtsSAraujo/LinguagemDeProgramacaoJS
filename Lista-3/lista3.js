@@ -219,14 +219,38 @@ function ex8(){
     let olhoAzul = 0;
     let porcentagemOlhoAzul = 0;
     let ruivo = 0;
+    let corDoCabelo, corDosOlhos
 
 
     for(let i = 1; i<=6; i++){
         const idade = prompt(`Insira a idade da ${i}º pessoa: `);
+        if(idade === null){
+            return;
+        }
         const peso = prompt(`Insira o peso da ${i}º pessoa: `);
+        if(peso === null){
+            return;
+        }
         const altura = prompt(`Insira a altura da ${i}º pessoa (Use . como separador decimal): `);
-        const corDosOlhos = prompt(`Insira uma opção para cor dos olhos(A - azul; P - preto; V - verde; C - castanho.): `);
-        const corDoCabelo = prompt(`Insira uma opção para cor do cabelo(P - preto; C - castanho; L - louro; R - ruivo.):`);
+        if(altura === null){
+            return;
+        }
+        do{
+            corDosOlhos = prompt(`Insira uma opção para cor dos olhos(A - azul; P - preto; V - verde; C - castanho.): `).toUpperCase();
+            corDosOlhos.toString();
+        }
+        while(corDosOlhos != "A" && corDosOlhos != "P" && corDosOlhos != "V" && corDosOlhos != "C");
+        if(corDosOlhos === null){
+            return;
+        }
+        do{
+            corDoCabelo = prompt(`Insira uma opção para cor do cabelo(P - preto; C - castanho; L - louro; R - ruivo.):`).toUpperCase();
+            corDoCabelo.toString();
+        }
+        while(corDoCabelo != "P" && corDoCabelo != "C" && corDoCabelo != "L" && corDoCabelo != "R");
+        if(corDoCabelo === null){
+            return;
+        }
 
         if(idade > 50 && peso <60){
             idadeMaior50 ++;
