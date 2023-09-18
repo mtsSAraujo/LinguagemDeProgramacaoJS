@@ -37,6 +37,22 @@ function ex3(){
     }
     console.log(mensagem)
 }
+function ex5(){
+    let logica = []
+    let prog = []
+    for(let i =0; i<15; i++){
+        logica.push(Number(prompt(`Digite o ID do aluno cursando logica`)))
+    }
+    for(let i = 0; i<10; i++){
+        prog.push(Number(prompt(`Digite o ID do aluno cursando programação`)))
+    }
+
+    for(let i =0; i<logica.length; i++){
+        if(prog.includes(logica[i])){
+            console.log(logica[i])
+        }
+    }
+}
 
 function ex6(){
     let vendas = []
