@@ -49,7 +49,7 @@ function ex5(){
 
     for(let i =0; i<logica.length; i++){
         if(prog.includes(logica[i])){
-            console.log(logica[i])
+            console.log(`Aluno matriculado em ambas: ${logica[i]}`)
         }
     }
 }
