@@ -1,3 +1,50 @@
+function ex1(){
+    let vetor = []
+    let vetorPar = []
+    let vetorImpar = []
+
+    for(let i =0; i<6; i++){
+        vetor.push(Number(prompt(`Digite o valor do ${i+1}° número: `)))
+    }
+    
+    for(i = 0; i<vetor.length; i++){
+        if(vetor[i] % 2 == 0){
+            vetorPar.push(vetor[i])
+        }
+        else{
+            vetorImpar.push(vetor[i])
+        }
+    }
+    let message = `Os número pares são: ${vetorPar}, totalizando ${vetorPar.length}\nOs números impares são: ${vetorImpar}, totalizando ${vetorImpar.length}`
+    console.log(message)
+}
+
+function ex2(){
+
+    let vetor = []
+    let m2 = []
+    let m3 = []
+    let m2Em3 = []
+
+    for(let i =0; i<7; i++){
+        vetor.push(Number(prompt(`Digite o valor do ${i+1}° número: `)))
+    }
+
+    for(i = 0; i<vetor.length; i++){
+        if(vetor[i] % 2 == 0){
+            m2.push(vetor[i])
+            if(vetor[i] % 3 == 0){
+                m2Em3.push(vetor[i])
+            }
+        }
+        if(vetor[i] % 3 == 0){
+            m3.push(vetor[i])
+        }
+    }
+    let message = `Multiplos de 2: ${m2} \nMultiplos de 3: ${m3} \nMultiplos de 2 e 3: ${m2Em3}`
+    console.log(message)
+}
+
 function ex3(){
     let codigos = []
     let estoque = []
@@ -37,6 +84,22 @@ function ex3(){
     }
     console.log(mensagem)
 }
+
+function ex4(){
+    let vetor = []
+    let posicao = []
+    for(let i = 0; i<15; i++){
+        vetor.push(Number(prompt(`Digite o ${i+1}° número: `)))
+    }
+    for(i = 0; i<vetor.length; i++){
+        if(vetor[i] == 30){
+            posicao.push(i)
+        }
+    }
+    let message = `As posições que o número 30 aparecem são: ${posicao} (índice do vetor)`
+    console.log(message)
+}
+
 function ex5(){
     let logica = []
     let prog = []
@@ -93,5 +156,76 @@ function ex6(){
     }
     console.log(`a maior comissão no valor de ${maior} foi recebida pelo vendedor ${nomeMaior}`)
     console.log(`a menor comissão no valor de ${menor} foi recebida pelo vendedor ${nomeMenor}`)
+
+}
+
+function ex7(){
+    let vetor = []
+    let somaPositivo = 0;
+    let qtdeNegativo = 0;
+    for(let i = 0; i<10; i++){
+        vetor.push(Number(prompt(`Digite o ${i+1}° número: `)))
+    }
+
+    for(let i = 0; i<vetor.length; i++){
+        if(vetor[i] <0){
+            qtdeNegativo ++
+        }
+        else{
+            somaPositivo += vetor[i]
+        }
+    }
+
+    let message = `A soma dos positivos é: ${somaPositivo} \nA quantidade de número negativos é: ${qtdeNegativo}`
+    message += `\nVetor inicial gerado: ${vetor}`
+    console.log(message)
+}
+
+function ex8(){
+    let media = []
+    let alunos = []
+    let reprovados = []
+    let notaNecessaria = []
+
+    for(let i =0; i<7; i++){
+        alunos.push(prompt(`Digite o nome do ${i+1}° aluno: `))
+        media.push(Number(prompt(`Digite a média do aluno ${alunos[i]}: `)))
+    }
+    let maiorMedia = media[0]
+
+    for(i=1; i<media.length;i++){
+        if(media[i] > maiorMedia){
+            maiorMedia = media[i]
+        }
+    }
+    let message = `O aluno com a maior média é: ${alunos[media.indexOf(maiorMedia)]} \n`
+
+    for(i=0; i<media.length; i++){
+        if(media[i] < 7){
+            reprovados.push(media[i])
+        }
+        else{
+            reprovados.push(-1)
+        }
+    }
+
+    for(i=0; i<media.length;i++){
+        if(reprovados[i] >=0 && reprovados[i] <=2){
+            notaNecessaria.push(5)
+        }
+        else if(reprovados[i] > 2){
+            notaNecessaria.push(7 - reprovados[i])
+        }
+        else{
+            notaNecessaria.push(-1)
+        }
+    }
+
+    message += `Nome dos alunos reprovados e suas notas:\n`
+    for(i=0; i<media.length; i++){
+        if(reprovados[i] != -1)
+            message += `Aluno: ${alunos[i]} Nota: ${media[i]} Nota Necessária: ${notaNecessaria[i]}\n`
+    }
+    console.log(message)
 
 }
