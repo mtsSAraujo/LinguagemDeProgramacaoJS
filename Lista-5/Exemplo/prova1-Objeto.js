@@ -16,7 +16,6 @@ function prova(){
         }
         vetor.push(objeto)
     }
-    achou = false
 
     for(i = 0; i< 4; i++){
         let objetoCompra={
@@ -24,6 +23,7 @@ function prova(){
             estoqueCompra: Number(prompt("Digite a quantidade do computador em estoque: ")),
             classificacaoCompra: prompt("Infome a classificação do computador: \n (Gamer, Desktop ou Notebook)").toLowerCase()
         }
+        let achou = false
         for(let j = 0; j<3; j ++){
             if(objetoCompra.nomeCompra == vetor[j].nome && objetoCompra.classificacaoCompra === vetor[j].classificacao){
                 achou = true
