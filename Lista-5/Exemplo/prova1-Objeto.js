@@ -16,4 +16,28 @@ function prova(){
         }
         vetor.push(objeto)
     }
+    achou = false
+
+    for(i = 0; i< 4; i++){
+        let objetoCompra={
+            nomeCompra: prompt("Digite o nome do computador: ").toLowerCase(),
+            estoqueCompra: Number(prompt("Digite a quantidade do computador em estoque: ")),
+            classificacaoCompra: prompt("Infome a classificação do computador: \n (Gamer, Desktop ou Notebook)").toLowerCase()
+        }
+        for(let j = 0; j<3; j ++){
+            if(objetoCompra.nomeCompra == vetor[j].nome && objetoCompra.classificacaoCompra === vetor[j].classificacao){
+                achou = true
+                if(objetoCompra.estoqueCompra <= vetor[j].estoque){
+                    console.log("Venda realizada com sucesso!")
+                    vetor[j].estoque = vetor[j].estoque - objetoCompra.estoqueCompra
+                }
+                else{
+                    console.log("Não há estoque suficiente")
+                }
+            }
+        }
+        if(!achou){
+            console.log("Venda nao realizada, nome ou classificação digitadas nao existem no banco.")
+        }
+    }
 }
