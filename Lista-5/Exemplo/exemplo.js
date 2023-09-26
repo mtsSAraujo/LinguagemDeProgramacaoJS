@@ -9,5 +9,12 @@ function exemplo(){
         classificacao: prompt("Informe a classificação")
     }
 
-    console.log(objeto)
+    //console.log(objeto)
+
+    var object = {
+        nome: prompt("Informe o nome"),
+        estoque: Number(prompt("Informe o estoque")),
+        classificacao: prompt("Informe a classificação")
+    }
+    console.log(object)
 }
