@@ -1,6 +1,6 @@
 function bike(){
     let vetorBicicletas = []
-    for(let i = 0; i<3; i++){
+    for(let i = 0; i<10; i++){
         let bike = {
             marca: prompt("Digite a marca da bicicleta: ").toLowerCase(),
             modelo: prompt("Digite o modelo da bicicleta: ").toLowerCase(),
@@ -20,7 +20,7 @@ function bike(){
     let vetorCaloi = []
     let maiorQuadro = 0;
     let posicaoMaiorQuadro = 0;
-    for(i=0;i<3;i++){
+    for(i=0;i<10;i++){
         soma += vetorBicicletas[i].preco
         if(antiga > vetorBicicletas[i].ano){
             antiga = vetorBicicletas[i].ano
@@ -37,14 +37,14 @@ function bike(){
         }
     }
 
-    for(i=0;i<3;i++){
+    for(i=0;i<10;i++){
         if(vetorBicicletas[i].ano == antiga){
             vetorAntigas.push(vetorBicicletas[i])
             console.log("bike antiga inserida")
         }
     }
     if(soma != 0){
-        media = soma/3
+        media = soma/10
     }
 
     console.log("A média de preço das bikes é: \nR$" + media)
