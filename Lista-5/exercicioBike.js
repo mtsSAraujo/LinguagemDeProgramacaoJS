@@ -44,7 +44,7 @@ function bike(){
         }
     }
     if(soma != 0){
-        media = soma/10
+        media = soma/vetorBicicletas.length
     }
 
     console.log("A média de preço das bikes é: \nR$" + media)
