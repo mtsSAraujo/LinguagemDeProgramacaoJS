@@ -29,7 +29,7 @@ function farmacia(){
         }
         vetorRemedios.push(remedio)
     }
-    
+    /*
     for(i=0;i<5;i++){
         let indexCompra = 0;
         let compra = {
@@ -55,5 +55,29 @@ function farmacia(){
             vetorRemedios[indexCompra].estoque = vetorRemedios[indexCompra].estoque - qtdCompra
             console.log(`Compra efetuada com sucesso`)
         }
-    }   
+    } */
+    
+    //solução do professor
+    for(i=0;i<5;i++){
+        let compra = {
+            codigoFarmacia: Number(prompt(`Digite o código da farmacia: `)),
+            nomeCompra: prompt(`Digite o nome do remédio a ser comprado: `).toLowerCase().toString(),
+            qtdCompra: Number(prompt(`Digite a quantidade a ser comprada: `))   
+        }
+        if(vetorRemedios.some((item) => 
+        item.codigoFarmacia == compra.codigoFarmacia && item.nomeRemedio == compra.nomeCompra)){
+            let index = vetorRemedios.findIndex((item) => 
+            item.codigoFarmacia == compra.codigoFarmacia && item.nomeRemedio == compra.nomeCompra)
+            if(vetorRemedios[index].estoque - compra.qtdCompra < 0){
+                alert(`Quantidade excede disponibilidade do estoque!`)
+            }
+            else{
+                vetorRemedios[index].estoque = vetorRemedios[index].estoque - compra.qtdCompra
+                console.log(`Compra efetuada com sucesso`)
+            }
+        }
+        else{
+            alert(`Compra cancelada! Farmacia ou nome inexistentes!`)
+        }
+    }
 }
