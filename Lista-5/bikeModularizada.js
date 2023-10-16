@@ -22,9 +22,9 @@ function media(vetor){
         soma = soma + vetor[i].preco
     }   
     console.log(`Média de preço das bikes ${soma/vetor.length}`)
-    // bike(s) mais antiga(s)
 }
 
+// bike(s) mais antiga(s)
 function maisAntiga(vetor){
     let maisAntiga = []
     maisAntiga[0] = vetor[0] // atribui todo o objeto
