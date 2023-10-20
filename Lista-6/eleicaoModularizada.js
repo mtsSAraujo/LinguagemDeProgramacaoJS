@@ -58,6 +58,18 @@ function contabilizaVotos(politicos, votos){
     console.log("Votos contabilizados! Votação encerrada!")
 }
 
+function ganhador(politicos){
+    let indexMaisVotos
+    let maisVotos = 0
+    for(let i= 0; i<politicos.length; i++){
+        if(maisVotos < politicos[i].votos){
+            maisVotos = politicos[i].votos
+            indexMaisVotos = i
+        }
+    }
+    return indexMaisVotos
+}
+
 function main() {
     let partidos = []
     let politicos = []
@@ -76,6 +88,8 @@ function main() {
                 break
             
             case 4: contabilizaVotos(politicos, votos)
+                let indexMaisVotos = ganhador(politicos)
+                console.log(`O vencedor foi: ${politicos[indexMaisVotos].nome} do partido ${politicos[indexMaisVotos].partido}!`)
                 break
             
             case 0: break
