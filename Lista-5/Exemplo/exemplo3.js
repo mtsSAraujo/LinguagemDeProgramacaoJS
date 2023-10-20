@@ -39,5 +39,7 @@ function votacao(){
         while(!politicos.some((item) => item.nome == voto.nome)){
             voto.nome = prompt(`Nome inexistente. Digite outro nome: `)
         }
+        votos.push(voto)
+        console.log("Voto contabilizado!")
     }
 }
