@@ -9,7 +9,7 @@ let criaMatriz = (matriz) => {
 
 let criaVetorAlunos = (vetorAlunos) => {
     for(let i=0; i<15; i++){
-        vetorAlunos[i].push(`Aluno ${i+1}`)
+        vetorAlunos[i] = `Aluno ${i+1}`
     }
 }
 
@@ -17,10 +17,12 @@ let fazMediaAluno = (matriz, vetorAlunos, matrizMedia) => {
     let media = 0
     let soma = 0
     for(let i=0; i<matriz.length; i++){
+        matrizMedia[i] = []
         for(let j=0; j<matriz[i].length ; j++){
             soma += matriz[i][j]
         }
         media = soma / 5
+        soma = 0
         matrizMedia[i][0] = (vetorAlunos[i])
         matrizMedia[i][1] = (media)
         if(media>=6){
@@ -45,6 +47,12 @@ let fazMediaClasse = (vetorMedia) => {
     return media
 }
 
+let mostraMatrizMedia = (matrizMedia) => {
+    for(let i=0; i<matrizMedia.length; i++){
+        console.log(`Aluno: ${matrizMedia[i][0]}, Média: ${matrizMedia[i][1]}, Situação: ${matrizMedia[i][2]}`)
+    }
+}
+
 function main() {
     let matriz = []
     let vetorAlunos = []
@@ -52,6 +60,7 @@ function main() {
     criaMatriz(matriz)
     criaVetorAlunos(vetorAlunos)
     fazMediaAluno(matriz, vetorAlunos, matrizMedia)
-    console.log(`Alunos e suas médias: ${matrizMedia}`)
+    console.log(matriz)
+    mostraMatrizMedia(matrizMedia)
     console.log(`Média da classe: ${fazMediaClasse(matrizMedia)}`)
 }
