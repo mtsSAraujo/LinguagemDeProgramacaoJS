@@ -52,6 +52,7 @@ function principal(){
     criaMatriz(matriz)
     achaMaior(matriz, vetorMaior)
     achaMenor(matriz, vetorMenor)
-    console.log(`O maior número é ${vetorMaior[0]}, na linha ${vetorMaior[1] + 1}º e coluna ${vetorMaior[2] + 1}º.`)
-    console.log(`O menor número é ${vetorMenor[0]}, na linha ${vetorMenor[1] + 1}º e coluna ${vetorMenor[2] + 1}º.`)
+    console.log(matriz)
+    console.log(`O maior número é ${vetorMaior[0]}, na linha ${vetorMaior[1] + 1} e coluna ${vetorMaior[2] + 1}.`)
+    console.log(`O menor número é ${vetorMenor[0]}, na linha ${vetorMenor[1] + 1} e coluna ${vetorMenor[2] + 1}.`)
 }
