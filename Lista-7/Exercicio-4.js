@@ -21,7 +21,7 @@ let fazMediaAluno = (matriz, vetorAlunos, matrizMedia) => {
         for(let j=0; j<matriz[i].length ; j++){
             soma += matriz[i][j]
         }
-        media = soma / 5
+        media = Number((soma / 5).toFixed(1))
         soma = 0
         matrizMedia[i][0] = (vetorAlunos[i])
         matrizMedia[i][1] = (media)
@@ -43,7 +43,7 @@ let fazMediaClasse = (vetorMedia) => {
     for(let i=0; i<vetorMedia.length; i++){
         soma += vetorMedia[i][1]
     }
-    media = soma/vetorMedia.length
+    media = (soma/vetorMedia.length).toFixed(1)
     return media
 }
 
