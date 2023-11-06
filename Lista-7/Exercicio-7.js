@@ -19,20 +19,18 @@ let criaMatriz6por4 = (matriz) => {
 let somaLinhasComColunas = (matriz4por6, matriz6por4, matrizResultante) => {
     let soma = 0
     let vetor = []
-    for(let i=0; i<matriz4por6.length; i++){
-        matrizResultante[i] = []
-        for(let j = 0; j<matriz6por4[0].length; j++){
-            for(let k=0; k<matriz4por6[0].length; k++){
-                vetor.push(matriz4por6[j][k] + matriz6por4[k][j])
-            }
-            matrizResultante[i][j] = vetor
-            vetor = []
+    for (let j = 0; j < matriz6por4[0].length; j++) {
+        matrizResultante[j] = []
+        for (let k = 0; k < matriz4por6[0].length; k++) {
+            vetor.push(matriz4por6[j][k] + matriz6por4[k][j])
         }
+        matrizResultante[j] = vetor
+        vetor = []
     }
     return matrizResultante
 }
 
-function main(){
+function main() {
     let matriz4por6 = []
     let matriz6por4 = []
     let matrizResultante = []

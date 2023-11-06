@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cep.js"></script>
+    <link rel="stylesheet" href="cep.css">
+</head>
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="cep">Informe o CEP</label>
+                <input type="number" name="cep" id="cep" placeholder="CEP">
+            </div>
+            <div>
+                <label for ="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" id="logradouro" readonly>
+            </div>
+            <div>
+                <label for ="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento" readonly>
+            </div>
+            <div>
+                <label for ="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" readonly>
+            </div>
+            <div>
+                <label for ="localidade">Localidade</label>
+                <input type="text" name="localidade" id="localidade" readonly>
+            </div>
+            <div>
+                <label for ="uf">UF</label>
+                <input type="text" name="uf" id="uf" readonly>
+            </div>
+            <div>
+                <label for="ibge">IBGE</label>
+                <input type="number" name="ibge" id="ibge" readonly>
+            </div>
+            <div>
+                <label for="gia">gia</label>
+                <input type="number" name="gia" id="gia" readonly>
+            </div>
+            <div>
+                <label for="ddd">DDD</label>
+                <input type="number" name="ddd" id="ddd" readonly>
+            </div>
+            <div>
+                <label for="siafi">SIAFI</label>
+                <input type="number" name="siafi" id="siafi" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="api()">
+                    Consulta CEP
+                </button> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
