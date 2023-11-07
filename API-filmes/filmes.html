@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="cep.js"></script>
-    <link rel="stylesheet" href="cep.css">
+    <script src="filmes.js"></script>
+    <link rel="stylesheet" href="filmes.css">
 </head>
 <body>
     <div>
         <form>
+            <div>
+                <label for="nome">Insira o titulo do filme:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do Filme">
+            </div>
+            <div>
+                <label for ="diretor"> Diretor </label>
+                <input type="text" id="diretor" name="diretor" placeholder="Diretor do Filme" readonly>
+            </div>
+            <div>
+                <img id = "poster"></img>
+            </div>
             <div>
                 <button type="button" onclick="api()">
                     Consulta Filme
