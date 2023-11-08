@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <script src="api.js"></script>
+    <link rel="stylesheet" href="api.css">
+</head>
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" placeholder="ID do Usuário">
+            </div>
+            <div>
+                <button type="button" onclick="api()">
+                    Consulta por ID
+                </button>
+            </div>
+            <div>
+                <label for ="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Nome do Usuário" readonly>
+            </div>
+            <div>
+                <label for ="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" placeholder="Nome de Usuário" readonly>
+            </div>
+            <div>
+                <label for ="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Email do Usuário">
+            </div>
+            <div>
+                <button type="button" onclick="apiEmailSearch()">
+                    Consulta por Email
+                </button>
+            </div>
+            <div>
+                <label for ="street">Rua:</label>
+                <input type="text" id="street" name="street" placeholder="Rua do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="suite">Apartamento:</label>
+                <input type="text" id="suite" name="suite" placeholder="Apartamento do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="city">Cidade:</label>
+                <input type="text" id="city" name="city" placeholder="Cidade do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="zipcode">CEP:</label>
+                <input type="text" id="zipcode" name="zipcode" placeholder="CEP do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="lat">Latitude:</label>
+                <input type="text" id="lat" name="lat" placeholder="Latitude do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="lng">Longitude:</label>
+                <input type="text" id="lng" name="lng" placeholder="Longitude do Endereço" readonly>
+            </div>
+            <div>
+                <label for ="phone">Telefone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Telefone do Usuário" readonly>
+            </div>
+            <div>
+                <label for ="website">Website:</label>
+                <input type="text" id="website" name="website" placeholder="Website do Usuário" readonly>
+            </div>
+            <div>
+                <label for ="company">Empresa:</label>
+                <input type="text" id="company" name="company" placeholder="Nome da Empresa" readonly>
+            </div>
+            <div>
+                <label for ="catchPhrase">Slogan:</label>
+                <input type="text" id="catchPhrase" name="catchPhrase" placeholder="Slogan da Empresa" readonly>
+            </div>
+            <div>
+                <label for ="bs">BS:</label>
+                <input type="text" id="bs" name="bs" placeholder="BS da Empresa" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
