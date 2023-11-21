@@ -21,6 +21,7 @@ function cadastrarCarros(carros, notas) {
 }
 
 function calcularMediaNotas(carros, notas) {
+    console.log(`Média de notas dos carros:`)
     for (let i = 0; i < carros.length; i++) {
         let soma = 0;
         for (let j = 0; j < notas[i].length; j++) {
